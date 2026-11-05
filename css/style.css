@@ -131,6 +131,17 @@ a { color: inherit; }
 .process-list.process-vertical h3 { font-size: 1.1rem; }
 .process-list.process-vertical p { font-size: .9rem; }
 .contact-panel-page { max-width: 850px; }
+.inquiry-form { max-width: 900px; padding: 30px; border: 1px solid var(--line); border-radius: 13px; background: linear-gradient(145deg, rgba(17, 29, 48, .95), rgba(12, 20, 34, .94)); }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.inquiry-form label { display: grid; gap: 8px; color: #dce8f4; font-size: .91rem; font-weight: 650; }
+.inquiry-form .form-wide { grid-column: 1 / -1; }
+.inquiry-form input, .inquiry-form select, .inquiry-form textarea { width: 100%; min-height: 48px; padding: 12px 14px; border: 1px solid rgba(142, 169, 196, .3); border-radius: 7px; background: rgba(5, 11, 20, .82); color: var(--text); font: inherit; font-weight: 400; }
+.inquiry-form textarea { min-height: 150px; resize: vertical; }
+.inquiry-form input:focus, .inquiry-form select:focus, .inquiry-form textarea:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+.inquiry-form select option { background: #101a2a; color: var(--text); }
+.form-note { margin: 20px 0; color: var(--muted); font-size: .86rem; line-height: 1.75; }
+.inquiry-form .button { border: 0; cursor: pointer; font: inherit; }
+.notice-card a:not(.button) { color: var(--accent); }
 
 .site-footer { margin-top: 25px; border-top: 1px solid var(--line); background: rgba(6, 10, 18, .65); }
 .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 25px; padding-block: 22px; }
@@ -151,6 +162,9 @@ a { color: inherit; }
     .about-layout { grid-template-columns: 1fr; gap: 20px; }
     .team-strip { grid-template-columns: 1fr; gap: 14px; }
     .contact-panel { grid-template-columns: 1fr; gap: 14px; padding: 22px; }
+    .inquiry-form { padding: 22px; }
+    .form-grid { grid-template-columns: 1fr; }
+    .inquiry-form .form-wide { grid-column: 1; }
     .contact-panel .button { grid-column: 1; grid-row: auto; justify-self: start; }
     .contact-address { grid-column: 1; }
 }
