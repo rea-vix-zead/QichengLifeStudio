@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="填寫需求表單，透過電子郵件聯絡 QichengLifeStudio。"><meta name="theme-color" content="#080d18"><meta property="og:site_name" content="QichengLifeStudio"><title>QichengLifeStudio｜聯絡我們</title><link rel="stylesheet" href="css/style.css"></head><body>
 <header class="site-header"><nav class="navbar container" aria-label="主要導覽"><a class="brand" href="index.html">QichengLife<span>Studio</span></a><div class="nav-links"><a href="services.html">服務</a><a href="about.html">關於</a><a href="process.html">合作流程</a><a href="contact.html" aria-current="page">聯絡</a></div></nav></header>
-<main><section class="hero hero-compact container"><p class="eyebrow">CONTACT</p><h1>先說說你的需求，<br><span>我們一起確認下一步。</span></h1><p class="hero-description">可選擇直接寄電子郵件，或填寫 Google 服務需求表單。我們收到需求後會先確認服務範圍，再以電子郵件回覆。</p><p><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSdrxgcgqYcUJC8zh7nyj_7ykCuI7aVJDYpMHZ5jij2eCPuhiQ/viewform">填寫 Google 服務需求表單 <span aria-hidden="true">→</span></a></p></section>
+<main><section class="hero hero-compact container"><p class="eyebrow">CONTACT</p><h1>先說說你的需求，<br><span>我們一起確認下一步。</span></h1><p class="hero-description">可選擇直接寄電子郵件，或填寫 Google 服務需求表單。我們會依你選擇的聯絡方式回覆；若未提供其他聯絡帳號，將以電子郵件聯絡。</p><p><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSdrxgcgqYcUJC8zh7nyj_7ykCuI7aVJDYpMHZ5jij2eCPuhiQ/viewform">填寫 Google 服務需求表單 <span aria-hidden="true">→</span></a></p></section>
 <section class="section container"><form class="inquiry-form" id="inquiry-form"><div class="form-grid">
 <label>怎麼稱呼你？<input name="稱呼" autocomplete="name" required maxlength="60" placeholder="姓名或稱呼"></label>
 <label>電子郵件<input name="回覆信箱" type="email" autocomplete="email" required maxlength="120" placeholder="方便回覆的信箱"></label>
 <label>想詢問的服務<select name="服務項目" required><option value="" selected disabled>請選擇</option><option>生活目標與行動規劃</option><option>基礎資訊查找／文字與文件整理</option><option>日常待辦與進度追蹤／需求討論</option><option>熟悉主題入門分享</option><option>客製化電腦菜單規劃（菜單交付）</option><option>電腦代購、組裝與到府服務</option><option>其他／尚不確定</option></select></label>
-<label>希望怎麼聯絡你？<select name="偏好聯絡方式"><option>電子郵件</option><option>先以電子郵件討論</option></select></label>
+<label>希望怎麼聯絡你？<select name="偏好聯絡方式"><option>電子郵件</option><option>LINE</option><option>Discord</option><option>其他</option></select></label>
+<label>LINE ID（選填）<input name="LINE ID" maxlength="120" placeholder="若選擇 LINE，請填寫方便聯絡的 LINE ID"></label>
+<label>Discord 使用者名稱或 ID（選填）<input name="Discord 聯絡帳號" maxlength="120" placeholder="若選擇 Discord，請填寫使用者名稱或 ID"></label>
+<label>其他聯絡方式或帳號（選填）<input name="其他聯絡方式" maxlength="160" placeholder="例如其他社群帳號或聯絡方式"></label>
 <label class="form-wide">簡單說明需求<textarea name="需求說明" required rows="6" maxlength="2500" placeholder="目前狀況、主要用途或問題、期待的協助即可。若詢問電腦服務，可補充用途、預算範圍、所在縣市，以及想要菜單、代購組裝或到府服務。"></textarea></label>
 <label class="form-wide">預計時程（選填）<input name="預計時程" maxlength="120" placeholder="例如：不急，或希望在某月前完成"></label>
 </div><p class="form-note">請勿填寫密碼、銀行帳號、身分證件號碼或其他敏感資料。此表單不會自動送出資料到網站；按下按鈕會開啟郵件程式，由你確認並寄出。</p><button class="button" type="submit">整理成郵件 <span aria-hidden="true">→</span></button></form></section>
 <section class="section container"><div class="notice-card"><h2>也可以直接寄信</h2><p>服務內容、工作範圍與費用會在承接前逐項說明，確認後再開始。</p><a class="contact-address" href="mailto:qicheng_life_studio@goldfishgateway.com">qicheng_life_studio@goldfishgateway.com</a></div></section></main>
 <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="index.html">QichengLife<span>Studio</span></a><p>個人目標規劃・日常整理・基礎資訊整理</p><p class="copyright">© 2026 QichengLifeStudio</p></div></footer>
 <script>document.getElementById('inquiry-form').addEventListener('submit',function(event){event.preventDefault();if(!this.reportValidity())return;const fields=new FormData(this);const body=[...fields.entries()].map(([label,value])=>label+'：'+value).join('\n\n');const subject='QichengLifeStudio 服務詢問｜'+fields.get('服務項目');window.location.href='mailto:qicheng_life_studio@goldfishgateway.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);});</script></body></html>
+
+
 
