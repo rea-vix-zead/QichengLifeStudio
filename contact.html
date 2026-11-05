@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="填寫需求表單，透過電子郵件聯絡 QichengLifeStudio。"><meta name="theme-color" content="#080d18"><meta property="og:site_name" content="QichengLifeStudio"><title>QichengLifeStudio｜聯絡我們</title><link rel="stylesheet" href="css/style.css"></head><body>
 <header class="site-header"><nav class="navbar container" aria-label="主要導覽"><a class="brand" href="index.html">QichengLife<span>Studio</span></a><div class="nav-links"><a href="services.html">服務</a><a href="about.html">關於</a><a href="process.html">合作流程</a><a href="contact.html" aria-current="page">聯絡</a></div></nav></header>
-<main><section class="hero hero-compact container"><p class="eyebrow">CONTACT</p><h1>先說說你的需求，<br><span>我們一起確認下一步。</span></h1><p class="hero-description">填寫下方表單，按下按鈕後會開啟你的郵件程式並帶入內容。請檢查後自行寄出，我們收到後再確認需求是否適合目前服務範圍。</p></section>
+<main><section class="hero hero-compact container"><p class="eyebrow">CONTACT</p><h1>先說說你的需求，<br><span>我們一起確認下一步。</span></h1><p class="hero-description">可選擇直接寄電子郵件，或填寫 Google 服務需求表單。我們收到需求後會先確認服務範圍，再以電子郵件回覆。</p><p><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSdrxgcgqYcUJC8zh7nyj_7ykCuI7aVJDYpMHZ5jij2eCPuhiQ/viewform">填寫 Google 服務需求表單 <span aria-hidden="true">→</span></a></p></section>
 <section class="section container"><form class="inquiry-form" id="inquiry-form"><div class="form-grid">
 <label>怎麼稱呼你？<input name="稱呼" autocomplete="name" required maxlength="60" placeholder="姓名或稱呼"></label>
 <label>電子郵件<input name="回覆信箱" type="email" autocomplete="email" required maxlength="120" placeholder="方便回覆的信箱"></label>
@@ -13,3 +13,4 @@
 <section class="section container"><div class="notice-card"><h2>也可以直接寄信</h2><p>服務內容、工作範圍與費用會在承接前逐項說明，確認後再開始。</p><a class="contact-address" href="mailto:qicheng_life_studio@goldfishgateway.com">qicheng_life_studio@goldfishgateway.com</a></div></section></main>
 <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="index.html">QichengLife<span>Studio</span></a><p>個人目標規劃・日常整理・基礎資訊整理</p><p class="copyright">© 2026 QichengLifeStudio</p></div></footer>
 <script>document.getElementById('inquiry-form').addEventListener('submit',function(event){event.preventDefault();if(!this.reportValidity())return;const fields=new FormData(this);const body=[...fields.entries()].map(([label,value])=>label+'：'+value).join('\n\n');const subject='QichengLifeStudio 服務詢問｜'+fields.get('服務項目');window.location.href='mailto:qicheng_life_studio@goldfishgateway.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);});</script></body></html>
+
