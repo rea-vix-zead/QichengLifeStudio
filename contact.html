@@ -13,9 +13,10 @@
 <label class="form-wide">簡單說明需求<textarea name="需求說明" required rows="6" maxlength="2500" placeholder="目前狀況、主要用途或問題、期待的協助即可。若詢問電腦服務，可補充用途、預算範圍、所在縣市，以及想要菜單、代購組裝或到府服務。"></textarea></label>
 <label class="form-wide">預計時程（選填）<input name="預計時程" maxlength="120" placeholder="例如：不急，或希望在某月前完成"></label>
 </div><p class="form-note">請勿填寫密碼、銀行帳號、身分證件號碼或其他敏感資料。此表單不會自動送出資料到網站；按下按鈕會開啟郵件程式，由你確認並寄出。</p><button class="button" type="submit">整理成郵件 <span aria-hidden="true">→</span></button></form></section>
-<section class="section container"><div class="notice-card"><h2>也可以直接寄信</h2><p>服務內容、工作範圍與費用會在承接前逐項說明，確認後再開始。</p><a class="contact-address" href="mailto:qicheng_life_studio@goldfishgateway.com">qicheng_life_studio@goldfishgateway.com</a></div></section></main>
+<section class="section container"><div class="notice-card"><h2>也可以直接寄信</h2><p>服務內容、工作範圍與費用會在承接前逐項說明，確認後再開始。</p><a class="contact-address" href="mailto:qicheng_life_studio@goldfishgateway.com">qicheng_life_studio@goldfishgateway.com</a><p>追蹤工作室最新消息／Follow our studio updates</p><a class="contact-address" href="https://www.facebook.com/QichengLifeStudio/" target="_blank" rel="noopener noreferrer">Facebook 粉絲專頁｜QichengLifeStudio →</a></div></section></main>
 <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="index.html"><span class="brand-zh">啟程生活規劃工作室</span><span class="brand-en">QichengLifeStudio</span></a><p>個人目標規劃・日常整理・基礎資訊整理</p><p class="copyright">© 2026 啟程生活規劃工作室｜QichengLifeStudio</p></div></footer>
 <script>document.getElementById('inquiry-form').addEventListener('submit',function(event){event.preventDefault();if(!this.reportValidity())return;const fields=new FormData(this);const body=[...fields.entries()].map(([label,value])=>label+'：'+value).join('\n\n');const subject='QichengLifeStudio 服務詢問｜'+fields.get('服務項目');window.location.href='mailto:qicheng_life_studio@goldfishgateway.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);});</script></body></html>
+
 
 
 
