@@ -6,4 +6,4 @@ QichengLifeStudio 由主要負責人與小型協作團隊共同投入，協助�
 
 - [前往網站首頁](https://rea-vix-zead.github.io/QichengLifeStudio/)
 - [瀏覽服務總覽](https://rea-vix-zead.github.io/QichengLifeStudio/services.html)
-- [了解合作流程](https://rea-vix-zead.github.io/ReaVixZead-QichengLifeStudio/process.html)
+- [了解合作流程](https://rea-vix-zead.github.io/QichengLifeStudio/process.html)
