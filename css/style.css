@@ -264,3 +264,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
     .button, .capability-card { transition: none; }
     .button:hover, .capability-card:hover { transform: none; }
 }
+
+/* Accessibility and small-screen refinements */
+.nav-links a:focus-visible,.capability-card:focus-visible,.contact-address:focus-visible {outline:2px solid var(--accent);outline-offset:3px}
+@media(max-width:560px){.brand{white-space:normal;min-width:0}.brand .brand-zh{overflow-wrap:anywhere}.nav-links a{min-width:0;overflow-wrap:anywhere}.faq-list summary{line-height:1.6}.footer-inner a{overflow-wrap:anywhere}}
