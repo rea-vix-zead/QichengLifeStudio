@@ -268,3 +268,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 /* Accessibility and small-screen refinements */
 .nav-links a:focus-visible,.capability-card:focus-visible,.contact-address:focus-visible {outline:2px solid var(--accent);outline-offset:3px}
 @media(max-width:560px){.brand{white-space:normal;min-width:0}.brand .brand-zh{overflow-wrap:anywhere}.nav-links a{min-width:0;overflow-wrap:anywhere}.faq-list summary{line-height:1.6}.footer-inner a{overflow-wrap:anywhere}}
+
+/* Seven-item navigation: desktop wraps gracefully, mobile is a compact grid. */
+.navbar{flex-wrap:wrap}
+.nav-links{flex-wrap:wrap;justify-content:flex-end;gap:4px}
+.nav-links a{min-width:0;padding:8px 9px;line-height:1.35}
+@media(max-width:900px){.nav-links{width:100%;justify-content:center;border-top:1px solid var(--line);padding-top:10px}}
+@media(max-width:560px){.nav-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}.nav-links a{padding:9px 2px;min-height:50px;font-size:.78rem}.nav-links small{font-size:.55rem}.nav-links a>span{white-space:normal;overflow-wrap:anywhere}}
+@media(max-width:360px){.nav-links{grid-template-columns:repeat(3,minmax(0,1fr))}}
