@@ -291,3 +291,19 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 @media(max-width:900px){.nav-links{justify-content:center}}
 @media(max-width:560px){.nav-links{grid-template-columns:repeat(5,minmax(0,1fr));align-items:stretch}.nav-links>a,.nav-dropdown>summary{font-size:.78rem;padding:9px 2px;min-height:50px}.nav-dropdown{min-width:0}.nav-dropdown>summary small{font-size:.55rem}.nav-dropdown-menu{right:0;min-width:min(210px,85vw)}.nav-dropdown-menu a{font-size:.9rem;padding:10px}}
 @media(max-width:360px){.nav-links{grid-template-columns:repeat(3,minmax(0,1fr))}.nav-dropdown-menu{right:0}}
+
+/* Category navigation: three accessible disclosure menus plus Contact. */
+.nav-links{flex-wrap:nowrap;gap:8px}
+.nav-dropdown{min-width:118px}
+.nav-dropdown-menu{min-width:225px;max-height:min(65vh,460px);overflow-y:auto;overscroll-behavior:contain}
+.nav-dropdown-menu a{line-height:1.45}
+.nav-dropdown-menu a small{opacity:.7}
+@media(max-width:900px){.nav-links{width:100%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.nav-dropdown{min-width:0}.nav-dropdown>summary{padding:9px 3px}.nav-dropdown-menu{min-width:220px}}
+@media(max-width:560px){.nav-links{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.nav-links>a,.nav-dropdown>summary{min-height:54px;padding:9px 6px;font-size:.9rem}.nav-dropdown>summary small{font-size:.6rem}.nav-dropdown-menu{left:0;right:auto;min-width:min(260px,calc(100vw - 44px));max-width:calc(100vw - 44px)}.nav-dropdown:nth-child(2n) .nav-dropdown-menu{left:auto;right:0}.nav-dropdown-menu a{font-size:.9rem}}
+@media(max-width:360px){.nav-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Keep site navigation accessible while scrolling. */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(8,13,24,.97);box-shadow:0 8px 24px rgba(0,0,0,.16)}
+html{scroll-padding-top:140px}
+@media(max-width:900px){html{scroll-padding-top:190px}.navbar{padding-block:10px}.nav-links{padding-top:8px}}
+@media(max-width:560px){html{scroll-padding-top:190px}.navbar{gap:8px;padding-block:9px}.nav-links{padding-top:7px}.nav-links>a,.nav-dropdown>summary{min-height:44px}.nav-dropdown-menu{max-height:min(55vh,400px)}}
