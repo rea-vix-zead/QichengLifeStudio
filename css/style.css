@@ -297,3 +297,14 @@ html{scroll-padding-top:120px}
 .nav-dropdown[open]{z-index:120}
 @media(max-width:560px){.nav-dropdown-menu{max-height:50vh;max-height:50dvh}.nav-dropdown-menu a{min-height:44px}.nav-links>a{overflow-wrap:anywhere}.nav-links>a>span{white-space:normal}}
 @media(max-width:360px){.brand .brand-zh{font-size:1rem}}
+
+/* Five-stage cooperation page */
+.process-detailed{gap:16px}
+.process-detailed li{align-items:start}
+.process-detailed h3{margin-top:0}
+.process-detailed .step-note{margin-top:12px;padding:10px 14px;border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 6px 6px 0;color:var(--text)}
+.process-info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.process-info-grid .notice-card{min-width:0;height:100%}
+.process-info-grid h3{margin-top:0;color:var(--accent)}
+.process-disclaimer{margin-top:20px;color:var(--muted);font-size:.88rem}
+@media(max-width:700px){.process-info-grid{grid-template-columns:1fr}}
