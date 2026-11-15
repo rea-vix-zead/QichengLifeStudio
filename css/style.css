@@ -276,3 +276,18 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 @media(max-width:900px){.nav-links{width:100%;justify-content:center;border-top:1px solid var(--line);padding-top:10px}}
 @media(max-width:560px){.nav-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}.nav-links a{padding:9px 2px;min-height:50px;font-size:.78rem}.nav-links small{font-size:.55rem}.nav-links a>span{white-space:normal;overflow-wrap:anywhere}}
 @media(max-width:360px){.nav-links{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Accessible click-to-open More menu using native details/summary. */
+.navbar{overflow:visible}
+.nav-links{align-items:center}
+.nav-dropdown{position:relative;min-width:110px}
+.nav-dropdown>summary{display:grid;align-content:center;min-height:48px;padding:8px 12px;text-align:center;border-radius:6px;color:var(--muted);font-size:.94rem;cursor:pointer;list-style:none;user-select:none}
+.nav-dropdown>summary::-webkit-details-marker{display:none}
+.nav-dropdown>summary small{display:block;font-size:.62rem;line-height:1.1;opacity:.72}
+.nav-dropdown>summary:hover,.nav-dropdown[open]>summary,.nav-dropdown-active{color:var(--accent)!important;background:var(--accent-soft)}
+.nav-dropdown-menu{position:absolute;right:0;top:calc(100% + 6px);z-index:30;min-width:190px;padding:8px;border:1px solid var(--line);border-radius:10px;background:#101b2c;box-shadow:0 16px 36px rgba(0,0,0,.4)}
+.nav-dropdown-menu a{display:grid;min-height:48px;align-content:center;text-align:left;padding:8px 12px;white-space:normal}
+.nav-dropdown-menu a:hover{background:var(--accent-soft)}
+@media(max-width:900px){.nav-links{justify-content:center}}
+@media(max-width:560px){.nav-links{grid-template-columns:repeat(5,minmax(0,1fr));align-items:stretch}.nav-links>a,.nav-dropdown>summary{font-size:.78rem;padding:9px 2px;min-height:50px}.nav-dropdown{min-width:0}.nav-dropdown>summary small{font-size:.55rem}.nav-dropdown-menu{right:0;min-width:min(210px,85vw)}.nav-dropdown-menu a{font-size:.9rem;padding:10px}}
+@media(max-width:360px){.nav-links{grid-template-columns:repeat(3,minmax(0,1fr))}.nav-dropdown-menu{right:0}}
