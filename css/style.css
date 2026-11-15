@@ -289,3 +289,11 @@ html{scroll-padding-top:120px}
 @media(max-width:560px){.navbar{gap:8px;padding-block:8px}.brand{white-space:normal}.nav-links{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding-top:7px}.nav-links>a,.nav-dropdown>summary{min-height:44px;padding:6px 5px;font-size:.86rem}.nav-dropdown>summary small,.nav-links>a small{font-size:.58rem}.nav-dropdown-menu{left:0;right:auto;min-width:min(250px,calc(100vw - 40px));max-width:calc(100vw - 40px);max-height:50dvh}.nav-dropdown:nth-child(2) .nav-dropdown-menu{left:auto;right:0}.nav-dropdown-menu a{font-size:.9rem;padding:9px 10px}.hero-mark{min-height:170px}.hero{gap:18px}html{scroll-padding-top:175px}}
 @media(max-width:360px){.nav-links{grid-template-columns:repeat(2,minmax(0,1fr))}.nav-dropdown-menu{min-width:min(220px,calc(100vw - 40px))}}
 @media(prefers-reduced-motion:reduce){.nav-links a{transition:none}}
+
+/* Audit fixes: keep expanded menus usable on short screens and touch devices. */
+.nav-dropdown-menu{max-height:min(60vh,450px);max-height:min(60dvh,450px);-webkit-overflow-scrolling:touch}
+.nav-dropdown-menu a{overflow-wrap:anywhere}
+.nav-dropdown>summary{touch-action:manipulation}
+.nav-dropdown[open]{z-index:120}
+@media(max-width:560px){.nav-dropdown-menu{max-height:50vh;max-height:50dvh}.nav-dropdown-menu a{min-height:44px}.nav-links>a{overflow-wrap:anywhere}.nav-links>a>span{white-space:normal}}
+@media(max-width:360px){.brand .brand-zh{font-size:1rem}}
